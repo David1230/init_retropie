@@ -4,6 +4,7 @@ sudo apt update && apt upgrade -y
 sudo apt install -y \
      neovim \
      usbmuxd \
+     nftables \
      apt-transport-https \
      ca-certificates \
      curl \
