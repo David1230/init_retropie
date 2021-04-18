@@ -11,7 +11,7 @@ sudo apt install -y \
      software-properties-common
 
 # setup nvim
-cd .config && git clone https://github.com/David1230/nvim.git
+cd ~/.config && git clone https://github.com/David1230/nvim.git
 mkdir -p nvim/undodir  nvim/plugged
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -30,3 +30,4 @@ sudo apt update
 sudo apt install -y --no-install-recommends \
     docker-ce \
     cgroupfs-mount
+sudo usermod -aG docker pi
