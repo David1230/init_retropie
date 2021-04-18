@@ -9,6 +9,7 @@ sudo apt install -y \
      ca-certificates \
      curl \
      gnupg2 \
+     python3-pip \
      software-properties-common
 
 # setup nvim
@@ -31,4 +32,5 @@ sudo apt update
 sudo apt install -y --no-install-recommends \
     docker-ce \
     cgroupfs-mount
-sudo usermod -aG docker pi
+sudo usermod -aG docker $(whoami)
+sudo pip3 install docker-compose
