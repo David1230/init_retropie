@@ -12,12 +12,6 @@ sudo apt install -y \
      python3-pip \
      software-properties-common
 
-# setup nvim
-cd ~/.config && git clone https://github.com/David1230/nvim.git
-mkdir -p nvim/undodir  nvim/plugged
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 #docker-ce daemon
 # Get the Docker signing key for packages
 curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | sudo apt-key add -
@@ -34,3 +28,9 @@ sudo apt install -y --no-install-recommends \
     cgroupfs-mount
 sudo usermod -aG docker $(whoami)
 sudo pip3 install docker-compose
+
+# setup nvim
+cd ~/.config && git clone https://github.com/David1230/nvim.git
+mkdir -p nvim/undodir  nvim/plugged
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
