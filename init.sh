@@ -10,6 +10,7 @@ sudo apt install -y \
      curl \
      gnupg2 \
      python3-pip \
+     yamllint \
      software-properties-common
 
 #docker-ce daemon
@@ -28,3 +29,12 @@ sudo apt install -y --no-install-recommends \
     cgroupfs-mount
 sudo usermod -aG docker $(whoami)
 sudo pip3 install docker-compose
+
+# nvim
+mkdir -p ~/.config && cd ~/.config
+git clone https://github.com/David1230/nvim.git
+mkdir -p nvim/undodir  nvim/plugged
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim +PlugInstall +qall
+
