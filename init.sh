@@ -36,5 +36,8 @@ git clone https://github.com/David1230/nvim.git
 mkdir -p nvim/undodir  nvim/plugged
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# Install nodejs
+curl -sL install-node.now.sh/lts | bash
+# install plugin
 vim +PlugInstall +qall
 
